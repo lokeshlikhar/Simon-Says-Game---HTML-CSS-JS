@@ -2,22 +2,12 @@
 let modal = document.getElementById("gameModal");
 let startBtn = document.getElementById("startBtn");
 
-// // Show modal on page load
-// window.onload = () => {
-//   modal.style.display = "flex";
-// };
-
-// Hide modal when user clicks Start Game
-// startBtn.onclick = function () {
-//   modal.style.display = "none";
-// };
-
+//hide modal on click
 startBtn.addEventListener("click" , ()=>{
   modal.style.display = "none";
 })
 
-
-
+//game Logic
 
 let gameSeq = [];
 let userSeq = [];
