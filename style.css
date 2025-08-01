@@ -1,0 +1,149 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background-color: white;
+}
+h1,
+h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+.btn {
+  width: 180px;
+  height: 180px;
+  border: 7px solid black;
+  border-radius: 20%;
+  margin: 1.5rem;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.red {
+  background-color: #d95980;
+}
+.yellow {
+  background-color: #f99b45;
+}
+.green {
+  background-color: rgb(24, 141, 104);
+}
+.purple {
+  background-color: #63aac0;
+}
+
+.flash {
+  animation: flashGlow 0.3s linear;
+  transform: scale(1.04);
+  
+}
+
+@keyframes flashGlow {
+  0% {
+    transform: scale(1);
+    background-color: white;
+  }
+  50% {
+    transform: scale(1.03);
+    background-color: white;
+  }
+  100% {
+    transform: scale(1);
+    background-color: white;
+  }
+}
+.userFlash {
+  /* background-color: rgb(124, 249, 124); */
+
+  background-color: #063f00;
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.p {
+  font-weight: bolder;
+  font-size: 2rem;
+  color: rgb(1, 132, 1);
+  margin-top: 0.2rem;
+}
+
+
+/* Modal Overlay */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Modal Box */
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 550px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.modal-content ol {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding-left: 2.5rem;
+  color: #303030;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.modal-content ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* Start Button */
+#startBtn {
+  padding: 0.7rem 1.5rem;
+  background-color: #f5a017;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+#startBtn:hover {
+  background-color: #f57f17;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
